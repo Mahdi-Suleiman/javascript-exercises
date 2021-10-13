@@ -1,0 +1,15 @@
+div {
+    display: inline-block;
+    margin-bottom: 0.5em;
+    background-color: yellow;
+    border: 1px black solid;
+    padding: 1em 5em;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+p {
+    margin: 0;
+    font-size: 60px;
+    font-weight: bold;
+}
