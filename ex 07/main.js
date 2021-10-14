@@ -13,18 +13,22 @@ let songName = document.querySelector("#songname");
 let myList = document.querySelector("#myList");
 
 function AddSong() {
-  let liNode = document.createElement("li");
-  let textNode = document.createTextNode(songName.value);
-  liNode.appendChild(textNode);
-  myList.appendChild(liNode);
+  if (songName.value !== "") {
+    let liNode = document.createElement("li");
+    let textNode = document.createTextNode(songName.value);
+    liNode.appendChild(textNode);
+    myList.appendChild(liNode);
 
-  let buttonNode = document.createElement("button");
-  buttonNode.innerHTML = "Delete Song";
-  buttonNode.setAttribute("onclick", "deleteDis(this)");
-  buttonNode.style.margin = "0 1em";
-  liNode.appendChild(buttonNode);
+    let buttonNode = document.createElement("button");
+    buttonNode.innerHTML = "Delete Song";
+    buttonNode.setAttribute("onclick", "deleteDis(this)");
+    buttonNode.style.margin = "0 1em";
+    liNode.appendChild(buttonNode);
+  }
+  else
+    alert(`"Song Name" field should not be empty!`)
 
-  songName.value = ""; // cleat field
+  songName.value = ""; // clear field
 }
 
 function removeAll() {

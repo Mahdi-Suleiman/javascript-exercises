@@ -1,0 +1,28 @@
+* {
+    /* margin: 0; */
+    padding: 0;
+}
+
+#paletteContainer {
+    display: grid;
+    grid-template-columns: repeat(6, 0.1fr);
+    grid-template-rows: repeat(9, 0.1fr);
+    gap: 0.5em 0;
+    border: rebeccapurple 2px solid;
+}
+
+.color {
+    width: 50px;
+    height: 50px;
+    border: black 1px solid;
+    background-color: #fffff0;
+}
+
+#colorViewer {
+    width: 200px;
+    height: 100px;
+    border: black 1px solid;
+    text-align: center;
+    font-weight: 900;
+    color: black;
+}
