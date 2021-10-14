@@ -16,8 +16,15 @@ function AddSong() {
   let liNode = document.createElement("li");
   let textNode = document.createTextNode(songName.value);
   liNode.appendChild(textNode);
-  document.getElementById("myList").appendChild(liNode);
-  songName.value = "";
+  myList.appendChild(liNode);
+
+  let buttonNode = document.createElement("button");
+  buttonNode.innerHTML = "Delete Song";
+  buttonNode.setAttribute("onclick", "deleteDis(this)");
+  buttonNode.style.margin = "0 1em";
+  liNode.appendChild(buttonNode);
+
+  songName.value = ""; // cleat field
 }
 
 function removeAll() {
@@ -25,4 +32,8 @@ function removeAll() {
   for (let i = 0; li = lis[i]; i++) {
     li.parentNode.removeChild(li);
   }
+}
+
+function deleteDis(obj) {
+  obj.parentNode.remove();
 }
