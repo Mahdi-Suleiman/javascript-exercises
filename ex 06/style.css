@@ -1,0 +1,33 @@
+header {
+    background-color: lightgray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0.2em;
+}
+
+header>p {
+    margin: 0;
+    padding: 0;
+    display: inline;
+    font-size: 2em;
+    font-weight: bolder;
+}
+
+a {
+    /* text-align: right; */
+    font-weight: normal;
+    font-size: 1em;
+}
+
+section {
+    margin: 0.4em;
+    /* padding: 0.5em 1em; */
+    border: black 1px solid;
+    width: 50%;
+    /* height: 20vh; */
+}
+
+article {
+    padding: 0.5em;
+}
