@@ -19,9 +19,12 @@ for (let i = 0; i < 54; i++) {
 //generate color palettes
 let colorPalette = document.querySelectorAll(".color");
 for (let i = 0; i < colorPalette.length; i++) {
-  let randomColor = Math.ceil(Math.random() * (16777215 - 500 + 1) + 500).toString(16);
-  colorPalette[i].style.backgroundColor = `#fffff0`;
-  colorPalette[i].style.backgroundColor = `#${randomColor}`;
+  let randomColor = Math.ceil(Math.random() * (16500000)).toString(16);
+  // colorPalette[i].style.backgroundColor = `#fffff0`;
+  colorPalette[i].innerHTML = `${randomColor}`;
+  // colorPalette[i].style.backgroundColor = `#${randomColor}`;
+  colorPalette[i].style.backgroundColor = '#' + (Math.random() * 0xFFFFFF << 0).toString(16).padStart(6, '0');
+  ;
 }
 
 function getColor(obj) {
